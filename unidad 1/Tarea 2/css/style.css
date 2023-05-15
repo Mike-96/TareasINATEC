@@ -1,0 +1,147 @@
+/*
+INDICE DE HOJA DE ESTILO CSS
+*1.0 - DEFENICIONES GLOBALES
+*2.0 - FONTS 
+*3.0 - MENU HORIZONTAL NAV
+*4.0 - IMAGEN
+*5.0 - PIE DE PAGINA
+*6.0 - RESPONSIVE TABLETS
+*7.0 - RESPONSIVE MOBILES
+*/
+
+/* *1.0 - DEFENICIONES GLOBALES */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* *2.0 - FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600&display=swap');
+
+body{
+    font-family: 'Signika', sans-serif;
+    font-weight: 500;
+    line-height: 1.4em; /*crea un espaciado entre cada texto*/
+    background-color: #15090D;
+}
+/* *3.0 - MENU HORIZONTAL NAV */
+nav ul{
+    display: flex; /*ordena de izquirda a derecha uno a lado del otro*/
+    list-style: none; /*formatea el texto*/
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+li{
+    float: left;
+}
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+li a:hover:not(.active) {
+    background-color: #fff;
+    opacity: 0.75;
+    color: #333;
+    font-weight: bold;
+  }
+/* *4.0 - IMAGEN */
+  .imagen{
+    margin: 12px 0px;
+  }
+  .imgMobile{
+    padding-top: 12px;
+    display: none;
+  }
+  img{
+    margin: auto;
+    display: block;
+    width: 900px;
+  }
+/* *5.0 - PIE DE PAGINA */
+  .pie{
+    background-color: #000000;
+  }
+
+  .textoPie{
+    padding: 20px;
+    color: #fff;
+  }
+
+  p{
+    text-decoration: none;
+    text-align: left;
+  }
+
+  .name{
+    font-weight: 600;
+  }
+
+  /* *6.0 - RESPONSIVE TABLETS */
+  @media (max-width: 800px) {
+    body{
+      background-color: #606060;
+    }
+    .textoPie{
+        background: #984944;
+        text-align: right;
+    }
+    img{
+        width: 750px;
+    }
+    li a{
+      color: #000000;
+      font-weight: 600;
+    }
+    nav ul{
+        background-color: white;
+        flex-direction: row-reverse;
+    }
+    
+    li a:hover:not(.active) {
+      background-color: #3d4662;
+      opacity: 0.75;
+      color: white;
+    }
+  }
+
+  /**6.0 - RESPONSIVE MOBILES */
+  @media (max-width: 600px) {
+    body{
+        line-height: 0.5em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 300;
+        background-color: #f0f8ff;
+    }
+    .textoPie{
+        background: #294056;
+        text-align: center;
+    }
+    img{
+        width: 400px;
+    }
+    nav ul{
+        background-color: #88af7e;
+        flex-direction: column-reverse;
+    }
+    
+    li a:hover:not(.active) {
+      background-color: #3d4662;
+      opacity: 0.75;
+      color: white;
+    }
+    .imgMobile{
+      display: block;
+    }
+  }
