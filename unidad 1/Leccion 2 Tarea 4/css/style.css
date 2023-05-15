@@ -1,0 +1,16 @@
+body{
+    margin: 20px;
+}
+
+textarea{
+    width: 30em; /* cols="30"*/
+    height: 3em; /* rows="3" */
+}
+
+.email{
+    background-color: #eeeeee;
+}
+
+p, label{
+    font-family: Tahoma;
+}
