@@ -1,0 +1,82 @@
+/*
+INDICE
+*-1.0 GENERAL
+*-2.0 CONTENEDOR
+*-3.0 DESTACADOS
+*-4.0 OFERTAS
+*-5.0 DISPONIBLES
+*-6.0 CONTENIDO
+*-7.0 FOOTER
+
+
+
+*/
+/* 1.0 GENERAL */
+body {
+	margin: 20px;
+}
+/* 2.0 CONTENEDOR */
+.contenedor{
+	display: flex;
+	flex-direction: row;
+}
+/* 3.0 DESTACADOS */
+#destacados {
+	background-color: #669999;
+	text-shadow: 0 0 3px white;
+}
+
+#destacados .contenedor > div {
+	background-color: white;
+	text-align: center;
+	padding: 10px;
+	margin: 10px;
+	width: 50%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 255, 0, 0.3);
+}
+/* 4.0 OFERTAS */
+#ofertas {
+	background-color: #F7D988;
+	text-shadow: 1px 1px 2px white, 0 0 30px #D46A6A;
+}
+#ofertas .contenedor > div {
+	background-color: white;
+	text-align: center;
+	padding: 10px;
+	margin: 10px;
+	width: 33.3%;
+	box-shadow: 4px 8px;
+}
+/* 5.0 DISPONIBLES */
+#disponible {
+	background-color: #F7A188;
+}
+
+#disponible .contenedor > div{
+	background-color: white;
+	padding: 10px;
+	text-align: center;
+	border: solid 5px coral;
+	width: 25%;
+	box-shadow: 4px 8px #D46A6A;
+}
+/* 6.0 CONTENIDO */ 
+#contenido > section > h1 {
+	padding: 10px;
+	text-align: center;
+}
+
+#contenido{
+	display: flex;
+	flex-direction: column;
+}
+/* 7.0 FOOTER */ 
+footer {
+	margin-top: 10px;
+	border-top: solid 1px black;
+	padding-top: 10px;
+	text-align: center;
+}
+
+
+
