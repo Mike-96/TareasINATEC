@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Link Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <title>Menu desplegable</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h3>Men&uacute;</h3>
+        <ul>
+            <li><a id="btnInicio" href="#">Inicio</a></li>
+            <li><a id="btnFormulario" href="#">Formulario</a></li>
+        </ul>
+    </div>
+
+    <div class="contenido">
+        <i id="i" class="material-icons menu-bar" >menu</i>
+
+        <div id="mensaje" class="mensaje">
+            <p class="texto">Bienvenido al mundo Web <i id="clear" class="material-icons saludo">clear</i></p>
+        </div>
+
+        <div id="saludar" class="saludar">
+            <p id="buttom-saludar">Saludar</p>
+        </div>
+
+        <div id="formulario">
+            <form action="">
+                <input type="text" placeholder="Nombre">
+                <input type="text" placeholder="Apellido">
+                <br>
+                <input type="text" placeholder="Correo">
+                <br>
+                <p id="buttom-guardar">Guardar</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- script JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <!-- Documento JavaScript -->
+    <script src="js/funciones.js"></script>
+
+</body>
+
+</html>

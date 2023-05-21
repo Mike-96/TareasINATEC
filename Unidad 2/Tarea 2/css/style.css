@@ -1,0 +1,204 @@
+/* - 1.0 Globales - */
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /*el contenido se mueve con todo*/
+}
+
+/* - .0 Fonts - */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+body{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    font-style: italic; /*Letra cursiva*/
+}
+
+/* - 2.0 Sidebar - */
+/*General*/
+.sidebar{
+    position: absolute; /*para que rompa el flujo y cubra todo el alto*/
+    width: 250px;
+    height: 100%;
+    background-color: #FBF7F8;
+    outline: solid gray 2px; /* crea un borde sin sobreponerse solo los otros bordes*/
+}
+/*Titulo menu*/
+.sidebar h3{
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    background-color: #fffaf0;
+    outline: solid gray 2px;
+}
+/*contenido dentro del menu*/
+.sidebar ul{
+    list-style: none; /*quitar estilo de lista*/
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li{
+    outline: solid gray 1px;
+    /*transicion*/
+    transition-property: border; /*le asignamos al border*/
+    transition-duration: 0.3s;/*que dure 3 segundos*/
+}
+
+.sidebar a{
+    display: block; /*que cubra el ancho del sidebar */
+    text-decoration: none; /*quietar estilo de link*/
+    color: black;
+    padding: 10px; /*separacion entre elementos*/
+}
+
+/*hover*/
+
+.sidebar li:hover{
+    background-color: silver;
+    border-left: 5px solid black;
+    outline: solid black 2px;
+}
+
+/* - 3.0 Estilos del boton del sidebar - */
+
+.contenido{
+    width: 100%;
+    height: 100%;
+    position: absolute; /*lo superponemos*/
+    background-color: #f0f8ff;
+    transition: all 0.5s;
+}
+
+.menu-bar{
+    cursor: pointer;
+}
+/*personalizamos el icono*/
+#i{
+    font-size: 2rem;
+    background-color: #FFADC7;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 10px;
+    box-sizing: border-box;/*para que el contenido no se sobre salga*/
+}
+
+/* - 4.0 Funcionalidad abrir menu*/
+.abrir{
+    transform: translateX(252px);
+}
+
+/* - 5.0 Mensaje de Bienvenida - */
+div.mensaje,.buttom-saludar{
+    margin-bottom: 30px;
+}
+.mensaje{
+    display: none;
+    background-color: #FFADC7;
+    width: 300px;
+    text-align: center;
+    padding: 15px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.texto{
+    color: white;
+    font-size: 1rem;
+}
+
+#clear{
+    cursor: pointer;
+}
+
+#clear:hover{
+    color: aqua;
+}
+
+/*Boton Saludar*/
+
+.saludar{
+    background-color: #FF365C;
+    border: solid black 1px;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+    border-radius: 30px;
+}
+
+.saludar p{
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.saludar p:hover{
+    color: black;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* - 6.0 Formulario - */
+div #formulario{
+    display: none;
+    border: solid black 2px;
+    width: 350px;
+    height: 130px;
+    margin: auto;
+    padding-top: 30px;
+}
+/*cajas de texto*/
+div #formulario input{
+    font-family: Cambria, Cochin, Georgia, Times;
+    font-style: italic;
+    padding: 5px;
+    margin: 5px;
+    width: 140px;
+}
+/*estilos boton Guardar*/
+div #formulario #buttom-guardar{
+    margin: 5px;
+}
+
+#buttom-guardar{
+    position: relative;
+    left: 220px;
+    border: solid black 1px;
+    background-color: #FF365C;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#buttom-guardar:hover{
+    color: black;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* - 7.0 Tabla de datos - */
+div #array{
+    display: none;
+    border: solid black 2px;
+    width: 700px;
+    height: auto;
+    margin: auto;
+
+}
+
+td{
+    padding: 5px;
+}
+
+#tablaArray{
+    margin: auto;
+}
+
+th{
+    padding: 35px;
+    text-decoration-line: underline overline;
+}
