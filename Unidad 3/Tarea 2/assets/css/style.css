@@ -1,0 +1,357 @@
+
+
+
+/*Universal*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@400;600&display=swap');
+
+@font-face {
+    font-family: "Pokemon GB";
+    src: url('../font/PokemonGB.ttf');
+  }
+
+:root{
+    --padding-container: 60px 0;
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+    background: rgb(236, 236, 236);
+    
+}
+
+header{
+    background-color: white;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
+/*contenedor*/
+.container{
+    max-width: 1300px; /*ancho maximo*/
+    overflow: hidden;/*todo lo que salga de ellos se esconda*/
+    margin: 0 auto;/*encaso que midan menos del 100% se centren horizontal*/
+    padding: var(--padding-container);
+}
+
+/*barra menu */
+.nav{
+    width: 90%;
+    height: 70px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*se vayan alas esquinas y repartan su espacio de manera equitativa*/
+
+    --padding-container: 0; /*para nav no agregue padding*/
+    
+
+}
+
+.nav_figure{
+    z-index: 100;/*para que se vea el logo al abrir el menu*/
+}
+
+.nav_hamburger{
+    z-index: 100;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.nav_button{
+    width: 20px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    
+}
+
+ /*menu de la barra */
+.nav_container{
+    position: absolute; /*esto hara que salga del flujo de; flexbox*/
+    inset: 0; /*para que se posicione en todo el navegador*/
+    padding: 70px 0;
+    min-height: 600px;/*para que no mida menos de 600px*/
+    background-color: hsl(229, 31%, 21%, .8);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transform: translate(-100%);/*ocultamos el menu*/
+    transition: .3s;
+}
+
+.nav_container--active{
+    transform: translate(0);/*mostramos el menu*/
+}
+
+.nav_list{
+    width: 90%;
+    padding: 0;
+}
+
+.nav_element{
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid #fff;
+}
+
+.nav_link{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
+    font-family: 'Pokemon GB';
+    font-size: 12px;
+}
+
+
+.nav_logo{
+    width: 280px;
+}
+
+/*contenedor de pokemons*/
+
+/*bolsa de compra*/
+.shopping{
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+
+.nav_bag{
+    cursor: pointer;
+    padding: 0;
+    margin-right: 110px;
+}
+
+.nav_button_bag{
+    width: 32px;
+    border-radius: 2px;
+}
+
+/*pokemons*/
+.img-container img{
+    width: 150px;
+    background-image: url("../svg/blobs.svg") ;
+}
+
+.pokemons{
+    padding-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.pokemon-block{
+    width: 180px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
+
+.name{
+    font-weight: bold;
+    font-family: 'Pokemon GB';
+    font-size: 14px;
+}
+
+.number{
+    font-size: 10px;
+    font-family: 'Pokemon GB';
+}
+
+/*paginacion*/
+.pagination{
+    width: 130px;
+}
+
+.navigation{
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.pagination{
+    list-style: none;
+}
+.pagination a{
+    text-decoration: none;
+    font-family: 'Pokemon GB';
+    font-size: 12px;
+    color: #000;
+    font-weight: bold;
+}
+.pagination a:hover{
+    color: #fff;
+}
+
+/*botones de paginacion*/
+#previous{
+    background-color: hsl(160, 34%, 53%);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#next{
+    background-color: #ffdf00;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/*stat del pokemon*/
+.progress-bar{
+    color: #fff;
+    font-family: 'Pokemon GB';
+    font-size: 10px;
+    padding: 3px;
+    font-weight: 100;
+}
+
+.nameStat{
+    font-family: 'Pokemon GB';
+    font-size: 12px;
+    padding: 3px;
+    margin: 3px;
+    display: flex;
+    align-items: flex-start;
+    font-weight: 300;
+}
+
+.pokemon-block-habilities{
+    font-family: 'Pokemon GB';
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+/*carrito*/
+.add-cart{
+    width: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/*footer*/
+footer{
+    background-color: #000;
+
+}
+.pie{
+    height: 250px;
+    color: #fff;
+    overflow: hidden;/*todo lo que salga de ellos se esconda*/
+    margin: 0 auto;/*encaso que midan menos del 100% se centren horizontal*/
+    padding: var(--padding-container);
+}
+
+.pie-container{
+    width: 90%;
+    height: 70px;
+    margin-left: 60px;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.contact{
+    width: 25%;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.email{
+    margin-bottom: 30px;
+}
+
+.about{
+    width: 35%;
+    align-items: center;
+    margin-left: 60px;
+    text-align: center;
+}
+
+.about-title{
+    margin-bottom: 30px;
+}
+.item-social{
+    padding: 0 10px;
+}
+
+.textAbout{
+    text-align: justify;
+}
+
+@media (max-width: 767px) {
+    header img{
+        width: 150px;
+    }
+}
+
+@media (min-width: 768px) {
+    :root{
+        --padding-container: 80px 0;
+    }
+    header img{
+        display: block;
+        width: 220px;
+    }
+    
+    .nav_hamburger{
+        display: none;
+    }
+
+    .nav_container{
+        position: static; /*eliminamos el inset 0*/
+        padding: 0;
+        min-height: unset;/*para que no mida menos de 600px*/
+        background-color: white;
+    
+        display: block;
+        
+        transform: unset;/*ocultamos el menu*/
+        transition: none;
+    }
+
+    .nav_list{
+        width: unset;
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+    }
+    
+    .nav_link{
+        color: #778899;
+    }
+
+    .nav_link:hover{
+        color: orange;
+    }
+    
+}    
