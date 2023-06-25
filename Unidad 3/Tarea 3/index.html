@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Tienda Pokémon</title>
+</head>
+
+<body>
+
+    <header class="hero">
+        <nav class="nav container">
+            <figure class="nav_logo">
+                <img id="logo" src="assets/img/logo.png"></img>
+            </figure>
+
+            <div class="nav_hamburger">
+                <img src="assets/icons/menu.png" class="nav_button"></img>
+            </div>
+
+            <div class="nav_container">
+                <ul class="nav_list container">
+                    <li class="nav_element"><a class="nav_link" href="index.html">Home</a></li>
+                    <li class="nav_element"><a class="nav_link Bcontact" href="#email">Contact</a></li>
+                    <li class="nav_element"><a class="nav_link Bproduct" href="#pokemons">Product</a></li>
+                    <li class="nav_element"><a class="nav_link Babout" href="#about-title">About</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="pokemon-container  container">
+
+        <!-- mostrar el carrito o ocultarlo -->
+        <div class="shopping">
+            <div class="nav_bag">
+                <img src="assets/icons/bag.png" class="nav_button_bag carrito" id="carrito"></img>
+                <div class="numero">
+                    <div id="cantidadPokemon"></div>
+                </div>
+            </div>
+        </div>
+
+        <aside class="cart" id="cart">
+            <h2>Carrito</h2>
+            <!-- Elementos del carrito -->
+            <table id="tablaProducto">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                </tbody>
+            </table>
+            <!-- Precio total -->
+            <p class="text-right">Total: <span id="total"></span></p>
+            <a id="botonComprar" class="btn">Finalizar Compra</a>
+        </aside>
+
+        <!-- contenedor de pokemons a vender -->
+        <div class="pokemons" id="pokemons">
+        </div>
+
+        <div class="navigation">
+            <ul class="pagination">
+                <li id="previous"><a href="#"> Previous </a></li>
+                <li id="next"><a href="#"> Next </a></li>
+            </ul>
+        </div>
+
+        <!-- end container -->
+    </div>
+
+    <footer class="pie">
+        <div class="pie-container">
+            <div class="contact">
+                <p class="email">Contact:</p>
+                <p class="email" id="email">correoprueba@prueba.com</p>
+                <ul class="social">
+                    <li class="item-social"><a class="facebook" href="https://www.facebook.com/" target="_blank"><img
+                                src="assets/icons/facebook.png"></img></a></li>
+
+                    <li class="item-social"><a class="GitHub" href="https://github.com/" target="_blank"><img
+                                src="assets/icons/github.png"></img></a></li>
+                </ul>
+            </div>
+            <div class="about">
+                <p class="about-title" id="about-title">About:</p>
+                <p class="textAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus, iusto, vero
+                    odio a quaerat veritatis sit inventore laudantium accusantium expedita enim excepturi tenetur fugit
+                    numquam repellendus omnis recusandae sequi?.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="assets/js/funciones.js"></script>
+    <script src="assets/js/api.js"></script>
+</body>
+
+</html>
